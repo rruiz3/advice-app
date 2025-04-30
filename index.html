@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advice of the Day</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; margin-top: 50px; }
+        img { max-width: 80%; height: auto; margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 18px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<h1>Click for Advice of the Day</h1>
+<button onclick="showRandomAdvice()">Give Me Advice</button>
+<div>
+    <img id="adviceImage" src="" alt="" style="display: none;" />
+</div>
+
+<script>
+    const images = [
+      'images/advice1.jpg',
+      'images/advice2.jpg',
+      'images/advice3.jpg',
+      // Add more paths as needed
+    ];
+
+    function showRandomAdvice() {
+      const img = document.getElementById("adviceImage");
+      const randomIndex = Math.floor(Math.random() * images.length);
+      img.src = images[randomIndex];
+      img.style.display = "block";
+    }
+</script>
+</body>
+</html>
